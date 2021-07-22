@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/models/products.dart';
 import 'package:furniture_app/screens/product/components/search_box.dart';
-// import 'package:furniture_app/screens/product_details/details_screen.dart';
+import 'package:furniture_app/screens/product_details/details_screen.dart';
 
 import 'category_list.dart';
 import 'product_card.dart';
@@ -35,14 +35,14 @@ class Body extends StatelessWidget {
                     itemIndex: index,
                     product: products[index],
                     press: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (BuildContext context) => DetailsScreen(
-                      //       product: products[index],
-                      //     ),
-                      //   ),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => DetailsScreen(
+                            product: products[index],
+                          ),
+                        ),
+                      );
                     },
                   ),
                 )
