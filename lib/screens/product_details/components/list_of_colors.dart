@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/theme/theme.dart';
-
 import 'color_dots.dart';
 
 class ListOfColors extends StatelessWidget {

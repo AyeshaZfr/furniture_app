@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/theme/theme.dart';
 
 class CategoryList extends StatefulWidget {
   @override
@@ -33,18 +34,18 @@ class _CategoryListState extends State<CategoryList> {
             alignment: Alignment.center,
             margin: EdgeInsets.only(
               left: 20,
-              right: index == categories.length - 1 ? 20 : 0,
+              right: index == categories.length - 1 ? borderRadius * 2 : 0,
             ),
-            padding: EdgeInsets.symmetric(horizontal: 8),
+            padding: EdgeInsets.symmetric(horizontal: padding / 2),
             decoration: BoxDecoration(
               color: index == selectedIndex
-                  ? Colors.white.withOpacity(0.4)
+                  ? Theme.of(context).cardColor.withOpacity(0.4)
                   : Colors.transparent,
-              borderRadius: BorderRadius.circular(6),
+              borderRadius: BorderRadius.circular(borderRadius / 2),
             ),
             child: Text(
               categories[index],
-              style: TextStyle(color: Colors.white),
+              style: Theme.of(context).textTheme.headline2,
             ),
           ),
         ),

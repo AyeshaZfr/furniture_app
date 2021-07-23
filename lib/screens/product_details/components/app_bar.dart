@@ -4,7 +4,7 @@ import 'package:flutter_svg/svg.dart';
 
 AppBar buildAppBar(BuildContext context) {
   return AppBar(
-    backgroundColor: Colors.white,
+    backgroundColor: Theme.of(context).backgroundColor,
     elevation: 0,
     leading: IconButton(
       padding: EdgeInsets.only(left: padding),

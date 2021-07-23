@@ -16,7 +16,7 @@ class ChatAndAddToCart extends StatelessWidget {
         vertical: padding / 2,
       ),
       decoration: BoxDecoration(
-        color: Color(0xFFFCBF1E),
+        color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(30),
       ),
       child: Row(
@@ -28,7 +28,7 @@ class ChatAndAddToCart extends StatelessWidget {
           SizedBox(width: 20 / 2),
           Text(
             "Chat",
-            style: TextStyle(color: Colors.white),
+            style: Theme.of(context).textTheme.headline4,
           ),
           Spacer(),
           TextButton.icon(
@@ -39,7 +39,7 @@ class ChatAndAddToCart extends StatelessWidget {
             ),
             label: Text(
               "Add to Cart",
-              style: TextStyle(color: Colors.white),
+              style: Theme.of(context).textTheme.bodyText2,
             ),
           ),
         ],

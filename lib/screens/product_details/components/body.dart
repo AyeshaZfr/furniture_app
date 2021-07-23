@@ -23,7 +23,7 @@ class Body extends StatelessWidget {
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: padding),
               decoration: BoxDecoration(
-                color: Colors.amber,
+                color: Theme.of(context).cardColor,
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(50),
                   bottomRight: Radius.circular(50),
@@ -46,16 +46,17 @@ class Body extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: padding / 2),
                     child: Text(
                       product.title,
-                      style: Theme.of(context).textTheme.headline6,
+                      style: Theme.of(context).textTheme.headline5,
                     ),
                   ),
                   Text(
                     '\$${product.price}',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.amber,
-                    ),
+                    style: Theme.of(context).textTheme.headline4,
+                    //  TextStyle(
+                    //   fontSize: 18,
+                    //   fontWeight: FontWeight.w600,
+                    //   color: Theme.of(context).cardColor,
+                    // ),
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: padding / 2),

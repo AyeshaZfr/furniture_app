@@ -1,43 +1,44 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/models/products.dart';
+import 'package:furniture_app/theme/theme.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({
     Key? key,
     required this.itemIndex,
     required this.product,
-    required this.press,
+    required this.onPress,
   }) : super(key: key);
 
   final int itemIndex;
   final Product product;
-  final press;
+  final onPress;
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.symmetric(
-        horizontal: 20,
-        vertical: 20 / 2,
+        horizontal: padding,
+        vertical: padding / 2,
       ),
       height: 160,
       child: InkWell(
-        onTap: press,
+        onTap: onPress,
         child: Stack(
           alignment: Alignment.bottomCenter,
           children: <Widget>[
             Container(
               height: 136,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(22),
+                borderRadius: BorderRadius.circular(borderRadius),
                 color: Colors.black,
               ),
               child: Container(
-                margin: EdgeInsets.only(right: 10),
+                margin: EdgeInsets.only(right: padding / 2),
                 decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(22),
+                  color: Theme.of(context).cardColor,
+                  borderRadius: BorderRadius.circular(borderRadius),
                 ),
               ),
             ),
@@ -47,7 +48,7 @@ class ProductCard extends StatelessWidget {
               child: Hero(
                 tag: '${product.id}',
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  padding: EdgeInsets.symmetric(horizontal: padding),
                   height: 160,
                   width: 200,
                   child: Image.asset(
@@ -68,28 +69,28 @@ class ProductCard extends StatelessWidget {
                   children: <Widget>[
                     Spacer(),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      padding: const EdgeInsets.symmetric(horizontal: padding),
                       child: Text(
                         product.title,
-                        style: Theme.of(context).textTheme.button,
+                        style: Theme.of(context).textTheme.headline4,
                       ),
                     ),
                     Spacer(),
                     Container(
                       padding: EdgeInsets.symmetric(
-                        horizontal: 20 * 1.5,
-                        vertical: 20 / 4,
+                        horizontal: padding * 1.5,
+                        vertical: padding / 4,
                       ),
                       decoration: BoxDecoration(
-                        color: Colors.amber,
+                        color: Theme.of(context).accentColor,
                         borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(22),
-                          topRight: Radius.circular(22),
+                          bottomLeft: Radius.circular(borderRadius),
+                          topRight: Radius.circular(borderRadius),
                         ),
                       ),
                       child: Text(
                         "\$${product.price}",
-                        style: Theme.of(context).textTheme.button,
+                        style: Theme.of(context).textTheme.headline2,
                       ),
                     ),
                   ],
