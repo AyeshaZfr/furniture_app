@@ -39,7 +39,7 @@ class _CategoryListState extends State<CategoryList> {
             padding: EdgeInsets.symmetric(horizontal: padding / 2),
             decoration: BoxDecoration(
               color: index == selectedIndex
-                  ? Theme.of(context).scaffoldBackgroundColor.withOpacity(0.4)
+                  ? Theme.of(context).scaffoldBackgroundColor.withOpacity(1)
                   : Colors.transparent,
               borderRadius: BorderRadius.circular(borderRadius / 2),
             ),

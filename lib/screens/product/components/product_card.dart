@@ -17,11 +17,9 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    print(size.height / 160);
     return Container(
-      margin: EdgeInsets.symmetric(
-        horizontal: padding,
-        vertical: padding / 2,
-      ),
+      margin: EdgeInsets.all(padding),
       height: 160,
       child: InkWell(
         onTap: onPress,

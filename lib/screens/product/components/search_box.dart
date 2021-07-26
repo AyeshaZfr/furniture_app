@@ -10,9 +10,9 @@ class SearchBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(padding / 2),
-      padding: EdgeInsets.all(padding / 2),
+      padding: EdgeInsets.fromLTRB(padding / 2, 0, padding / 2, 0),
       decoration: BoxDecoration(
-        color: Theme.of(context).scaffoldBackgroundColor.withOpacity(0.4),
+        color: Theme.of(context).scaffoldBackgroundColor.withOpacity(1),
         borderRadius: BorderRadius.circular(borderRadius),
       ),
       child: TextField(

@@ -16,21 +16,32 @@ List<Product> products = [
     id: 1,
     price: 56,
     title: "Product 1",
-    description: "lorem ipsum",
+    description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     image: "assets/images/sofa.png",
   ),
   Product(
     id: 2,
     price: 56,
     title: "Product 2",
-    description: "lorem ipsum ",
+    description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     image: "assets/images/sofa.png",
   ),
   Product(
     id: 3,
     price: 56,
     title: "Product 3",
-    description: "lorem ipsum ",
+    description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+    image: "assets/images/sofa.png",
+  ),
+  Product(
+    id: 4,
+    price: 56,
+    title: "Product 4",
+    description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     image: "assets/images/sofa.png",
   ),
 ];
