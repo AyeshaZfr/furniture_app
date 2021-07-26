@@ -18,7 +18,7 @@ List<Product> products = [
     title: "Product 1",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    image: "assets/images/sofa.png",
+    image: "assets/images/item_1.png",
   ),
   Product(
     id: 2,
@@ -26,7 +26,7 @@ List<Product> products = [
     title: "Product 2",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    image: "assets/images/sofa.png",
+    image: "assets/images/item_2.png",
   ),
   Product(
     id: 3,
@@ -34,14 +34,6 @@ List<Product> products = [
     title: "Product 3",
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    image: "assets/images/sofa.png",
-  ),
-  Product(
-    id: 4,
-    price: 56,
-    title: "Product 4",
-    description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    image: "assets/images/sofa.png",
+    image: "assets/images/item_3.png",
   ),
 ];

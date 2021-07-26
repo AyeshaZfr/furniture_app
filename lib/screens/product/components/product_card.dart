@@ -17,7 +17,7 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    print(size.height / 160);
+
     return Container(
       margin: EdgeInsets.all(padding),
       height: 160,
@@ -30,7 +30,9 @@ class ProductCard extends StatelessWidget {
               height: 136,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(borderRadius),
-                color: Theme.of(context).accentColor,
+                color: itemIndex.isEven
+                    ? Theme.of(context).selectedRowColor
+                    : Theme.of(context).primaryColor,
                 boxShadow: [defaultShadow],
               ),
               child: Container(
@@ -91,7 +93,7 @@ class ProductCard extends StatelessWidget {
                       ),
                       child: Text(
                         "\$${product.price}",
-                        style: Theme.of(context).textTheme.headline2,
+                        style: Theme.of(context).textTheme.bodyText1,
                       ),
                     ),
                   ],

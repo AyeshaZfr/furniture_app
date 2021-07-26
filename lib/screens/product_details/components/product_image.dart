@@ -14,13 +14,13 @@ class ProductPoster extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 20),
-      height: size.width * 0.75,
+      height: size.width * 0.7,
       child: Stack(
         alignment: Alignment.topCenter,
         children: <Widget>[
           Container(
-            height: size.width * 0.7,
-            width: size.width * 0.7,
+            height: size.width * 0.8,
+            width: size.width * 0.8,
             decoration: BoxDecoration(
               color: Colors.white,
               shape: BoxShape.circle,
@@ -28,8 +28,8 @@ class ProductPoster extends StatelessWidget {
           ),
           Image.asset(
             image,
-            height: size.width * 0.70,
-            width: size.width * 0.70,
+            height: size.width * 0.75,
+            width: size.width * 0.75,
             fit: BoxFit.cover,
           ),
         ],

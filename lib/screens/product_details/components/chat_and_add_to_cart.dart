@@ -16,7 +16,7 @@ class ChatAndAddToCart extends StatelessWidget {
         vertical: padding / 2,
       ),
       decoration: BoxDecoration(
-        color: Theme.of(context).backgroundColor,
+        color: Theme.of(context).scaffoldBackgroundColor,
         borderRadius: BorderRadius.circular(borderRadius),
       ),
       child: Row(

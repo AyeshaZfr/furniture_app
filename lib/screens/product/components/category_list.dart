@@ -10,11 +10,9 @@ class _CategoryListState extends State<CategoryList> {
   int selectedIndex = 0;
   List categories = [
     'All',
-    'Category1',
-    'Category2',
-    'Category3',
-    'Category4',
-    'Category5'
+    'Sofa',
+    'Park bench',
+    'Armchair',
   ];
   @override
   Widget build(BuildContext context) {
@@ -39,7 +37,7 @@ class _CategoryListState extends State<CategoryList> {
             padding: EdgeInsets.symmetric(horizontal: padding / 2),
             decoration: BoxDecoration(
               color: index == selectedIndex
-                  ? Theme.of(context).scaffoldBackgroundColor.withOpacity(1)
+                  ? Theme.of(context).scaffoldBackgroundColor.withOpacity(0.3)
                   : Colors.transparent,
               borderRadius: BorderRadius.circular(borderRadius / 2),
             ),
