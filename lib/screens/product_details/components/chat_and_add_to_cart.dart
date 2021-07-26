@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/theme/theme.dart';
+import 'package:furniture_app/theme/constants.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ChatAndAddToCart extends StatelessWidget {
@@ -16,30 +16,30 @@ class ChatAndAddToCart extends StatelessWidget {
         vertical: padding / 2,
       ),
       decoration: BoxDecoration(
-        color: Theme.of(context).cardColor,
-        borderRadius: BorderRadius.circular(30),
+        color: Theme.of(context).backgroundColor,
+        borderRadius: BorderRadius.circular(borderRadius),
       ),
       child: Row(
         children: <Widget>[
           SvgPicture.asset(
             "assets/icons/chat.svg",
-            height: 18,
+            height: iconHeight,
           ),
           SizedBox(width: 20 / 2),
           Text(
             "Chat",
-            style: Theme.of(context).textTheme.headline4,
+            style: Theme.of(context).textTheme.headline6,
           ),
           Spacer(),
           TextButton.icon(
             onPressed: () {},
             icon: SvgPicture.asset(
               "assets/icons/bag.svg",
-              height: 18,
+              height: iconHeight,
             ),
             label: Text(
               "Add to Cart",
-              style: Theme.of(context).textTheme.bodyText2,
+              style: Theme.of(context).textTheme.headline6,
             ),
           ),
         ],

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/models/products.dart';
-import 'package:furniture_app/theme/theme.dart';
+import 'package:furniture_app/theme/constants.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({
@@ -32,12 +32,13 @@ class ProductCard extends StatelessWidget {
               height: 136,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(borderRadius),
-                color: Colors.black,
+                color: Theme.of(context).accentColor,
+                boxShadow: [defaultShadow],
               ),
               child: Container(
                 margin: EdgeInsets.only(right: padding / 2),
                 decoration: BoxDecoration(
-                  color: Theme.of(context).cardColor,
+                  color: Theme.of(context).scaffoldBackgroundColor,
                   borderRadius: BorderRadius.circular(borderRadius),
                 ),
               ),
@@ -48,12 +49,14 @@ class ProductCard extends StatelessWidget {
               child: Hero(
                 tag: '${product.id}',
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: padding),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: padding,
+                  ),
                   height: 160,
                   width: 200,
                   child: Image.asset(
                     product.image,
-                    fit: BoxFit.cover,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),

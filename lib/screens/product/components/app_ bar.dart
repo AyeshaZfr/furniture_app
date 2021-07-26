@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:furniture_app/theme/constants.dart';
 
 AppBar buildAppBar(BuildContext context) {
   return AppBar(
@@ -11,9 +12,15 @@ AppBar buildAppBar(BuildContext context) {
     ),
     centerTitle: false,
     actions: <Widget>[
-      IconButton(
-          onPressed: () {},
-          icon: SvgPicture.asset("assets/icons/notification.svg"))
+      Container(
+        margin: EdgeInsets.only(right: padding),
+        child: IconButton(
+            onPressed: () {},
+            icon: SvgPicture.asset(
+              "assets/icons/notification.svg",
+              height: iconHeight,
+            )),
+      ),
     ],
   );
 }

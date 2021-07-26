@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/models/products.dart';
-import 'package:furniture_app/theme/theme.dart';
+import 'package:furniture_app/theme/constants.dart';
 
 import 'chat_and_add_to_cart.dart';
 import 'list_of_colors.dart';
@@ -23,10 +23,10 @@ class Body extends StatelessWidget {
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: padding),
               decoration: BoxDecoration(
-                color: Theme.of(context).cardColor,
+                color: Theme.of(context).backgroundColor,
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(50),
-                  bottomRight: Radius.circular(50),
+                  bottomLeft: Radius.circular(borderRadius * 2),
+                  bottomRight: Radius.circular(borderRadius * 2),
                 ),
               ),
               child: Column(
@@ -43,26 +43,27 @@ class Body extends StatelessWidget {
                   ),
                   ListOfColors(),
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: padding / 2),
+                    padding: EdgeInsets.fromLTRB(
+                        padding / 2, padding, padding / 2, 0),
                     child: Text(
                       product.title,
                       style: Theme.of(context).textTheme.headline5,
                     ),
                   ),
-                  Text(
-                    '\$${product.price}',
-                    style: Theme.of(context).textTheme.headline4,
-                    //  TextStyle(
-                    //   fontSize: 18,
-                    //   fontWeight: FontWeight.w600,
-                    //   color: Theme.of(context).cardColor,
-                    // ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(
+                        padding / 2, padding / 2, padding / 2, 0),
+                    child: Text(
+                      '\$${product.price}',
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(vertical: padding / 2),
+                    padding: EdgeInsets.fromLTRB(
+                        padding / 2, padding / 2, padding / 2, padding),
                     child: Text(
                       product.description,
-                      style: TextStyle(color: Colors.white),
+                      style: Theme.of(context).textTheme.headline6,
                     ),
                   ),
                   SizedBox(height: 20),

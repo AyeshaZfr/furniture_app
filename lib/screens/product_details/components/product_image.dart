@@ -14,9 +14,9 @@ class ProductPoster extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 20),
-      height: size.width * 0.8,
+      height: size.width * 0.75,
       child: Stack(
-        alignment: Alignment.bottomCenter,
+        alignment: Alignment.topCenter,
         children: <Widget>[
           Container(
             height: size.width * 0.7,
@@ -28,8 +28,8 @@ class ProductPoster extends StatelessWidget {
           ),
           Image.asset(
             image,
-            height: size.width * 0.75,
-            width: size.width * 0.75,
+            height: size.width * 0.70,
+            width: size.width * 0.70,
             fit: BoxFit.cover,
           ),
         ],

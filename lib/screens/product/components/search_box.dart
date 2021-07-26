@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:furniture_app/theme/theme.dart';
+import 'package:furniture_app/theme/constants.dart';
 
 class SearchBox extends StatelessWidget {
   const SearchBox({Key? key, required this.onChanged}) : super(key: key);
@@ -12,7 +12,7 @@ class SearchBox extends StatelessWidget {
       margin: EdgeInsets.all(padding / 2),
       padding: EdgeInsets.all(padding / 2),
       decoration: BoxDecoration(
-        color: Theme.of(context).cardColor.withOpacity(0.4),
+        color: Theme.of(context).scaffoldBackgroundColor.withOpacity(0.4),
         borderRadius: BorderRadius.circular(borderRadius),
       ),
       child: TextField(
@@ -20,7 +20,10 @@ class SearchBox extends StatelessWidget {
         decoration: InputDecoration(
           enabledBorder: InputBorder.none,
           focusedBorder: InputBorder.none,
-          icon: SvgPicture.asset('assets/icons/search.svg'),
+          icon: SvgPicture.asset(
+            'assets/icons/search.svg',
+            height: iconHeight,
+          ),
           hintText: "Search..",
           hintStyle: Theme.of(context).textTheme.headline3,
         ),
