@@ -55,7 +55,10 @@ flutter:
     - assets/icons/back-arrow.svg
     - assets/icons/bag.svg
     - assets/icons/chat.svg
-    - assets/images/sofa.png
+    - assets/images/item_1.png
+    - assets/images/item_2.png
+    - assets/images/item_3.png
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
