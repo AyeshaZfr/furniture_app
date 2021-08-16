@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './theme/theme.dart';
 import './screens/product/product_screen.dart';
 
 void main() {
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Furniture App",
       home: ProductScreen(),
+      theme: theme,
     );
   }
 }
